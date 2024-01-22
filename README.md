@@ -20,7 +20,7 @@ Here are some ideas to get you started:  -->
 - ⚡ Fun fact: ...
  
 
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"> </script>
+<script src="https://platform.linkedin.com/badges/js/profile.js"  type="text/javascript"> </script>
 
 
 
