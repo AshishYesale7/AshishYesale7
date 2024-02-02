@@ -23,11 +23,7 @@ Here are some ideas to get you started:  -->
 - ⚡ Fun fact: ...
 
 
- Heroku  User : 
- 
- <img width="100%" height="300px" alt="Heruku Credits"  src="https://camo.githubusercontent.com/843604935c1a139258f4558d19239d71503612ea295d85ea9952e94dfbce9a70/68747470733a2f2f6a6f6e6272617a6572626c6f672e66696c65732e776f726470726573732e636f6d2f323031372f31322f6d656d6974696d2d70737963686f706f6d702e6a7067](https://github.com/AshishYesale7/AshishYesale7/assets/67554129/6b5496de-4e91-4eae-8677-939a788cfa89)https://github.com/AshishYesale7/AshishYesale7/assets/67554129/6b5496de-4e91-4eae-8677-939a788cfa89"/>
-
+ Heroku  User : <img width="1440" alt="Heruku Credits" src="https://github.com/AshishYesale7/AshishYesale7/assets/67554129/69ff7760-86f4-489d-88eb-8cb252812c6a">
 
  
-
-
+ 
