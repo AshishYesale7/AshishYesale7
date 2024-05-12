@@ -23,6 +23,10 @@ Here are some ideas to get you started:  -->
 - ⚡ Fun fact: ...
 
 
+Ethnicity : Not Hispanic or Latino
+Race : Asian
+
+
  <!-- Heroku  User : <img width="1440" alt="Heruku Credits" src="https://github.com/AshishYesale7/AshishYesale7/assets/67554129/69ff7760-86f4-489d-88eb-8cb252812c6a"> -->
 
  
