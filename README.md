@@ -2,7 +2,7 @@
 
 
 
-<iframe href="https://ashishyesale7.github.io/AshishYesale7/" />  
+<iframe href="https://ashishyesale7.github.io/AshishYesale7"  width="100%" height="400px" />  
 
 
 <!-- <img width="90%" height="900px" src="https://camo.githubusercontent.com/843604935c1a139258f4558d19239d71503612ea295d85ea9952e94dfbce9a70/68747470733a2f2f6a6f6e6272617a6572626c6f672e66696c65732e776f726470726573732e636f6d2f323031372f31322f6d656d6974696d2d70737963686f706f6d702e6a7067"/> -->
