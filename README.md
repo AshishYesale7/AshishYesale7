@@ -24,7 +24,7 @@ Here are some ideas to get you started:  -->
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: ...
 
--Ethnicity : Not Hispanic or Latino
+-Ethnicity : Hindu-Maratha
 
 -Race : Asian
 
