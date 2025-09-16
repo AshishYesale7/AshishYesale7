@@ -13,9 +13,9 @@ on:
   push:
     branches:
     - main
-
- 
-permissions:
+    
+  permissions:
+  
   contents: write
 
 jobs:
@@ -29,6 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: conf/github-profile-3d-contrib.json
+          OUTPUT_DIR: profile-3d-contrib
           
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
