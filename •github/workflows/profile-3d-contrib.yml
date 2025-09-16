@@ -1,23 +1,40 @@
-name: Deploy 3D Profile
+name: Generate 3D Profile Contribution
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    # run daily at a time of your choice in UTC
+    - cron: "0 */24 * * *"
+  workflow_dispatch:
 
 permissions:
-  contents: write   # <-- this line is crucial
+  contents: write
 
 jobs:
-  deploy:
+  build:
+    name: Build & Deploy 3D Profile
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v5
 
-      - name: Build & Deploy
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output-3d-contrib
-          build_dir: profile-3d-contrib
+      - name: Generate 3D Contribution Image
+        uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          # you can set other optional ENV vars if needed
+          # MAX_REPOS: 100
+          # SETTING_JSON: path/to/your/custom-settings.json
+
+      - name: Commit & Push changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          # this ensures commit message only if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update generated 3D profile contribution"
+            git push origin HEAD:main
+          fi
