@@ -22,7 +22,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A .
+          git add .github/profile-3d-contrib   # default output dir
           if git commit -m "generated"; then
             git push
           fi
