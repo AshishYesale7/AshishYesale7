@@ -14,6 +14,10 @@ on:
     branches:
     - main
 
+permissions:
+  contents: write   # <-- this line is crucial
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
