@@ -1,40 +1,44 @@
-name: Generate 3D Profile Contribution
+name: Generate 3D Profile Contribution Charts
 
 on:
   schedule:
-    # run daily at a time of your choice in UTC
-    - cron: "0 */24 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"      # once per day at midnight UTC
+  workflow_dispatch:          # allow manual run
+  push:
+    branches:
+      - main                  # also run on pushes to main
 
 permissions:
   contents: write
 
 jobs:
   build:
-    name: Build & Deploy 3D Profile
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
+      # checkout your repository so we can commit into it
+      - uses: actions/checkout@v5
 
+      # generate the SVG charts into ./profile-3d-contrib
       - name: Generate 3D Contribution Image
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          # you can set other optional ENV vars if needed
-          # MAX_REPOS: 100
-          # SETTING_JSON: path/to/your/custom-settings.json
+          OUTPUT_DIR: profile-3d-contrib   # output folder at repo root
 
+      # show what was generated (optional for debugging)
+      - name: List generated files
+        run: ls -R profile-3d-contrib || echo "no files generated"
+
+      # commit and push the generated folder into main branch
       - name: Commit & Push changes
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -A
-          # this ensures commit message only if there are changes
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add profile-3d-contrib
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update generated 3D profile contribution"
+            git commit -m "Update 3D profile contribution SVGs"
             git push origin HEAD:main
           fi
