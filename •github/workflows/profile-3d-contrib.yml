@@ -1,37 +1,44 @@
-name: generate 3d chart for profile contributions
+name: Generate 3D Profile Contribution Charts
 
 on:
-  # run automatically every 24 hours
   schedule:
-    - cron: "0 */24 * * *" 
-  
-  # allows to manually run the job at any time
-  workflow_dispatch:
-  
-  # run on every push on the main branch
-  # don't forget to change if you're using 'master' branch
+    - cron: "0 0 * * *"      # once per day at midnight UTC
+  workflow_dispatch:          # allow manual run
   push:
     branches:
-    - main
+      - main                  # also run on pushes to main
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
     steps:
+      # checkout your repository so we can commit into it
       - uses: actions/checkout@v5
-      - uses: yoshi389111/github-profile-3d-contrib@latest
+
+      # generate the SVG charts into ./profile-3d-contrib
+      - name: Generate 3D Contribution Image
+        uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: conf/github-profile-3d-contrib.json
-          
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push SVGs to the output-3d branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: main
-          build_dir: profile-3d-contrib
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_DIR: profile-3d-contrib   # output folder at repo root
+
+      # show what was generated (optional for debugging)
+      - name: List generated files
+        run: ls -R profile-3d-contrib || echo "no files generated"
+
+      # commit and push the generated folder into main branch
+      - name: Commit & Push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add profile-3d-contrib
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update 3D profile contribution SVGs"
+            git push origin HEAD:main
+          fi
