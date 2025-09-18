@@ -1,8 +1,8 @@
-name: Generate 3D Contribution Chart
+name: GitHub-Profile-3D-Contrib
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  schedule: # 03:00 JST == 18:00 UTC
+    - cron: "0 18 * * *"
   workflow_dispatch:
 
 permissions:
@@ -11,24 +11,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Generate SVGs
-        uses: yoshi389111/github-profile-3d-contrib@latest
+      - uses: actions/checkout@v5
+      - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          USERNAME: AshishYesale7
-          SETTING_JSON: conf/github-profile-3d-contrib.json
-
-      - name: Commit & Push SVGs
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & Push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib/
-          if git diff --cached --quiet; then
-            echo "No new SVGs to commit"
-          else
-            git commit -m "Update 3D profile SVGs"
-            git push origin HEAD:main
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          if git commit -m "generated"; then
+            git push
           fi
