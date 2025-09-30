@@ -1,5 +1,7 @@
  
-### Hi there 👋 I am ,
+###  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png" alt="Comet" width="60" height="60" />  Hi there 👋 I am ,  
+ 
+
 
 ```                              
                _        _     _     _       __   __              _
@@ -27,6 +29,15 @@
 ![](./profile-3d-contrib/profile-night-green.svg) 
 
 ---
+
+<div align="center" >
+<h1> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Eyes.png" alt="Eyes" width="60" height="60"  
+<p align="center">
+  <img src="https://img.shields.io/github/followers/AshishYesale7?label=Followers&style=social">
+  <img src="https://img.shields.io/github/stars/AshishYesale7?label=Stars&style=social">
+  <img src="https://komarev.com/ghpvc/?username=AshishYesale7&color=blue&style=flat-square">
+</p>
+
 
 ### 📬 Connect with Me
 <div align="center">
