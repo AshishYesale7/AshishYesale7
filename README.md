@@ -25,3 +25,22 @@
  
  
 ![](./profile-3d-contrib/profile-night-green.svg) 
+
+---
+
+### 📬 Connect with Me
+<div align="center">
+  <a href="https://www.linkedin.com/in/ashishyesale">
+    <img src="https://img.shields.io/badge/LinkedIn-Ashish%20Yesale-blue?style=for-the-badge&logo=linkedin" />
+  </a>
+ 
+  <a href="mailto:ashishyesale007@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Ashish%20Yesale-red?style=for-the-badge&logo=gmail" />
+  </a>
+</div>
+
+
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" />
+</p>
