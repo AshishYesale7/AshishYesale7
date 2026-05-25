@@ -11,7 +11,7 @@
 
   ```
 
-[Link ](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.0.6-5413878570549248/windows-x64/Antigravity-x64.exe)
+[Link ](https://nodejs.org/dist/v24.16.0/node-v24.16.0-win-x64.zip)
 
   
 - 👀 I’m interested in AI , CyberSecurity , Android Development 
