@@ -7,11 +7,26 @@
               / \   ___| |__ (_)___| |__    \ \ / /__  ___  __ _| | ___
              / _ \ / __| '_ \| / __| '_ \    \ V / _ \/ __|/ _` | |/ _ \
             / ___ \\__ \ | | | \__ \ | | |    | |  __/\__ \ (_| | |  __/
-           /_/   \_\___/_| |_|_|___/_| |_|    |_|\___||___/\__,_|_|\___| 
+           /_/   \_\___/_| |_|_|___/_| |_|    |_|\___||___/\__,_|_|\___|
+
+
+# Download and install Chocolatey:
+powershell -c "irm https://community.chocolatey.org/install.ps1|iex"
+
+# Download and install Node.js:
+choco install nodejs --version="24.16.0"
+
+# Verify the Node.js version:
+node -v # Should print "v24.16.0".
+
+# Verify npm version:
+npm -v # Should print "11.13.0".
+
 
   ```
 
 [Link ](https://nodejs.org/dist/v24.16.0/node-v24.16.0-win-x64.zip)
+
 
   
 - 👀 I’m interested in AI , CyberSecurity , Android Development 
