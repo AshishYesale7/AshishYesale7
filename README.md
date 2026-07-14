@@ -1,5 +1,5 @@
  
-###  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png" alt="Comet" width="60" height="60" />  Hi there 👋 I am ,  
+Hi there 👋 I am ,  
  
 
 ```                              
@@ -61,3 +61,7 @@
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" />
 </p>
+
+- My Stats report :
+-  [YEAR 2025](https://wakatime.com/a-look-back-at-2025/d1ca8a6d-192f-4863-8ce8-0faf66511e19/xgofbqsiiw)
+-  [YEAR 2026]:pending...
